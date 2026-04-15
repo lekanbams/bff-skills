@@ -13,7 +13,7 @@ metadata:
 
 # HODLMM Fee Harvester Skill
 
-## Use case
+## Why agents need it
 
 An LP agent with positions across multiple HODLMM pools needs to know: **"Are my positions actually earning fees, and is it worth claiming them?"**
 
