@@ -13,7 +13,7 @@ metadata:
 
 # HODLMM Emergency Exit Skill
 
-## Use case
+## Why agents need it
 
 An agent with active LP positions across HODLMM pools faces a critical question during market stress: **"Should I exit this position right now, or hold?"**
 
@@ -30,7 +30,7 @@ This skill closes the loop: it reads the risk signals, applies hardcoded safety 
 - Emits `bitflow withdraw-liquidity-simple` MCP commands only when urgency is `warning` or higher
 - Triple-gate safety: (1) urgency must be warning/critical, (2) position value must exceed $0.50, (3) `--confirm` flag required
 
-## Safety enforcements (hardcoded in code)
+## Safety notes
 
 | Limit | Value | Purpose |
 |-------|-------|---------|
