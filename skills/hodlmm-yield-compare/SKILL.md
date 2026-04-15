@@ -13,7 +13,7 @@ metadata:
 
 # HODLMM Yield Compare Skill
 
-## Use case
+## Why agents need it
 
 An agent holding sBTC or STX faces a fundamental question before deploying capital: **"Should I LP in a HODLMM pool, lend on Zest, or stack STX?"** Today, answering that requires manually checking Bitflow pool stats, reading Zest contract state, and mentally comparing risk-adjusted returns across different protocols with different risk profiles.
 
@@ -144,6 +144,19 @@ Output includes real APR, 24h APR, TVL (USD + BTC), daily/weekly volume and fees
 - STX Stacking: risk 10 (protocol-level security, PoX consensus)
 
 **Risk-adjusted score** = APR / max(riskScore, 5). Higher is better.
+
+## Output contract
+
+All commands return structured JSON to stdout with a top-level `status` field:
+
+```json
+{ "status": "ok", "network": "mainnet", "...": "command-specific data" }
+```
+
+On error:
+```json
+{ "status": "error", "error": "descriptive message" }
+```
 
 ## Known constraints
 
